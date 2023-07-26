@@ -1,0 +1,21 @@
+class Interaction:
+    def __init__(self, player):
+        self.player = player
+
+    def send_message(self, message):
+        # Code to send a message to the player
+
+    def receive_action(self, action):
+        # Code to receive an action from the player and execute it
+
+
+class Communication(Interaction):
+    def __init__(self, player, other_player):
+        super().__init__(player)
+        self.other_player = other_player
+
+    def send_message(self, message):
+        # Code to send a message from the player to the other player
+
+    def receive_message(self, message):
+        # Code to receive a message from the other player
