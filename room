@@ -4,6 +4,7 @@ class Room:
         self.description = description
         self.items = []
         self.players = []
+        self.connected_rooms = {}
 
     def add_item(self, item):
         self.items.append(item)
@@ -16,3 +17,6 @@ class Room:
 
     def remove_player(self, player):
         self.players.remove(player)
+
+    def add_connection(self, direction, room):
+        self.connected_rooms[direction] = room
