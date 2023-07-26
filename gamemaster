@@ -1,0 +1,16 @@
+class GameMaster:
+    def __init__(self):
+        self.rooms = []
+        self.players = []
+
+    def add_room(self, room):
+        self.rooms.append(room)
+
+    def add_player(self, player):
+        self.players.append(player)
+
+    def process_action(self, player, action):
+        # Code to process a player's action and update the game state
+
+    def update_game(self):
+        # Code to update the game state based on the players' actions
