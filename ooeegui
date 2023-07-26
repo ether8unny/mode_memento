@@ -1,0 +1,20 @@
+import PySimpleGUI as sg
+
+def run_gui():
+    layout = [[sg.Text("Welcome to Memento Adventure Game!")],
+              [sg.Output(size=(80, 20))],
+              [sg.Input(key='-INPUT-')],
+              [sg.Button('Submit Action'), sg.Button('Quit')]]
+
+    window = sg.Window('Memento Adventure Game', layout)
+
+    while True:
+        event, values = window.read()
+        if event == sg.WINDOW_CLOSED or event == 'Quit':
+            break
+        elif event == 'Submit Action':
+            action = values['-INPUT-']
+            # Call the appropriate function to handle the player's action
+            # For example: handle_action(action)
+
+    window.close()
